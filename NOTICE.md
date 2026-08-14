@@ -1,6 +1,6 @@
 # Notice and provenance
 
-Novel Writer (NW) public release candidate `0.3.0`.
+Novel Writer (NW) public release `0.3.0`.
 
 NW is distributed under GNU AGPL v3. Its documented development lineage includes adapted ideas from:
 

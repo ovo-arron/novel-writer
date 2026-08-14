@@ -4,7 +4,7 @@ Novel Writer is a portable Agent Skill for conceiving, drafting, continuing, rev
 
 NW 不是某一种网文模板。它可以用于短篇、中篇、单行本、系列与长篇连载，也可以适配现实、文学、言情、历史、悬疑、犯罪、惊悚、恐怖、科幻、奇幻、修仙、轻小说、书信体、文档体、非线性与实验性小说。
 
-Public release candidate: `0.3.0`.
+Public release: `0.3.0`.
 
 ## Three cores
 
