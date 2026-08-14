@@ -1,0 +1,4 @@
+interface:
+  display_name: "Novel Writer (NW)"
+  short_description: "全类型小说构思、成文、反机械对白、连续性与专属记忆"
+  default_prompt: "Use $novel-writer to conceive, draft, continue, or revise this fiction while preserving author intent, continuity, project memory, and character-owned speech that does not turn private analysis into polished AI-like dialogue."

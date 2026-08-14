@@ -1,0 +1,32 @@
+name: validate
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+env:
+  PYTHONUTF8: "1"
+
+jobs:
+  skill:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Validate installable skill
+        run: python skills/novel-writer/scripts/validate_nw.py skills/novel-writer --public-release
+      - name: Compile portable helpers
+        run: python -m compileall -q skills/novel-writer/scripts
+      - name: Test allowlisted clone builder
+        run: python skills/novel-writer/scripts/build_public_clone.py .public-clone-smoke --deny-token private-project-marker-for-ci
+      - name: Validate generated clone
+        run: python .public-clone-smoke/scripts/validate_nw.py .public-clone-smoke --public-release --deny-token private-project-marker-for-ci
